@@ -31,7 +31,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "18px",
-            opacity: 1.8,
+            opacity: 0.8,
             margin: 0,
           }}
         >
@@ -76,7 +76,7 @@ export default function Home() {
 
             const arrow = e.currentTarget.querySelector(".arrow") as HTMLElement | null;
             if (arrow) {
-              arrow.style.transform = "rotate(0deg)";
+              arrow.style.transform = "translateY(1px) rotate(45deg)";
             }
           }}
           onMouseLeave={(e) => {
@@ -86,7 +86,7 @@ export default function Home() {
 
             const arrow = e.currentTarget.querySelector(".arrow") as HTMLElement | null;
             if (arrow) {
-              arrow.style.transform = "rotate(-45deg)";
+              arrow.style.transform = "translateY(0) rotate(0deg)";
             }
           }}
         >
@@ -97,9 +97,11 @@ export default function Home() {
             style={{
               display: "inline-block",
               fontSize: "16px",
-              transform: "rotate(-45deg)",
-              transition: "transform 250ms ease",
               lineHeight: 1,
+              transform: "translateY(0) rotate(0deg)",
+              transformOrigin: "50% 50%",
+              transition: "transform 920ms cubic-bezier(0.22, 1, 0.36, 1)",
+              willChange: "transform",
             }}
           >
             →
