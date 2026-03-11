@@ -1,4 +1,5 @@
 "use client";
+
 export default function Home() {
   return (
     <main
@@ -15,7 +16,7 @@ export default function Home() {
       }}
     >
       <header className="pt-16 lg:pt-20" style={{ paddingTop: "20px" }}>
-        <img src="/Lag_1.svg"></img>
+        <img src="/Lag_1.svg" alt="Formatet logo" />
       </header>
 
       <section
@@ -50,61 +51,67 @@ export default function Home() {
           Smile Studio er blevet til FORMATET
         </h2>
 
-<a
-  href="https://formatet.dk"
-  style={{
-    marginTop: "9px",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "10px",
-    padding: "12px 15px",
-    borderRadius: "8px",
-    fontSize: "0.95rem",
-    fontWeight: 200,
-    textDecoration: "none",
-    backgroundColor: "#f5f5f5",
-    color: "#2d2737",
-    border: "1px solid transparent",
-    transition: "all 250ms ease",
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.border = "1px solid rgba(255,255,255,0.55)";
-    e.currentTarget.style.color = "#ffffff";
-    e.currentTarget.querySelector(".arrow").style.transform = "rotate(0deg)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundColor = "#f5f5f5";
-    e.currentTarget.style.border = "1px solid transparent";
-    e.currentTarget.style.color = "#2d2737";
-    e.currentTarget.querySelector(".arrow").style.transform = "rotate(-45deg)";
-  }}
->
-  Besøg Formatet
+        <a
+          href="https://formatet.dk"
+          style={{
+            marginTop: "9px",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "10px",
+            padding: "12px 15px",
+            borderRadius: "8px",
+            fontSize: "0.95rem",
+            fontWeight: 200,
+            textDecoration: "none",
+            backgroundColor: "#f5f5f5",
+            color: "#2d2737",
+            border: "1px solid transparent",
+            transition: "all 250ms ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "transparent";
+            e.currentTarget.style.border = "1px solid rgba(255,255,255,0.55)";
+            e.currentTarget.style.color = "#ffffff";
 
-  <span
-    className="arrow"
-    style={{
-      display: "inline-block",
-      fontSize: "16px",
-      transform: "rotate(-45deg)",
-      transition: "transform 250ms ease",
-      lineHeight: 1,
-    }}
-  >
-    →
-  </span>
-</a>
+            const arrow = e.currentTarget.querySelector(".arrow") as HTMLElement | null;
+            if (arrow) {
+              arrow.style.transform = "rotate(0deg)";
+            }
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#f5f5f5";
+            e.currentTarget.style.border = "1px solid transparent";
+            e.currentTarget.style.color = "#2d2737";
+
+            const arrow = e.currentTarget.querySelector(".arrow") as HTMLElement | null;
+            if (arrow) {
+              arrow.style.transform = "rotate(-45deg)";
+            }
+          }}
+        >
+          Besøg Formatet
+
+          <span
+            className="arrow"
+            style={{
+              display: "inline-block",
+              fontSize: "16px",
+              transform: "rotate(-45deg)",
+              transition: "transform 250ms ease",
+              lineHeight: 1,
+            }}
+          >
+            →
+          </span>
+        </a>
       </section>
 
       <footer
         style={{
           fontSize: "16px",
-          opacity: 0.20,
+          opacity: 0.2,
           lineHeight: 1.5,
           maxWidth: "620px",
-
-          
         }}
       >
         <p style={{ margin: 0 }}>
