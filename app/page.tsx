@@ -92,20 +92,20 @@ export default function Home() {
         >
           Besøg Formatet
 
-          <span
-            className="arrow"
-            style={{
-              display: "inline-block",
-              fontSize: "16px",
-              lineHeight: 1,
-              transform: "translateY(0) rotate(0deg)",
-              transformOrigin: "50% 50%",
-              transition: "transform 920ms cubic-bezier(0.22, 1, 0.36, 1)",
-              willChange: "transform",
-            }}
-          >
-            →
-          </span>
+        <span
+          className="arrow"
+          style={{
+            display: "inline-block",
+            fontSize: "16px",
+            lineHeight: 1,
+            transform: "rotate(0deg)",
+            transformOrigin: "center",
+            transition: "transform 650ms cubic-bezier(0.22, 1, 0.36, 1)",
+            willChange: "transform",
+          }}
+        >
+          →
+        </span>
         </a>
       </section>
 
