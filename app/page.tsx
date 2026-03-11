@@ -31,7 +31,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "18px",
-            opacity: 0.8,
+            opacity: 1.8,
             margin: 0,
           }}
         >
@@ -40,6 +40,7 @@ export default function Home() {
 
         <h2
           style={{
+            color: "white",
             fontSize: "55px",
             fontWeight: 100,
             lineHeight: 1.2,
