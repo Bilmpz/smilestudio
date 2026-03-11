@@ -11,7 +11,7 @@ FORMATET continues the work with branding, design, and digital development.
 
 If you are looking for the current studio or services, please visit:
 
-https://formatet.com
+https://formatet.dk
 
 ## About FORMATET
 
