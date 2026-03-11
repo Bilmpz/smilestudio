@@ -56,29 +56,44 @@ export default function Home() {
     marginTop: "9px",
     display: "inline-flex",
     alignItems: "center",
-    gap: "8px",
-    padding: "10px 18px",
-    borderRadius: "6px",
-    fontSize: "0.82rem",
-    fontWeight: 500,
+    gap: "10px",
+    padding: "12px 15px",
+    borderRadius: "8px",
+    fontSize: "0.95rem",
+    fontWeight: 200,
     textDecoration: "none",
     backgroundColor: "#f5f5f5",
     color: "#2d2737",
     border: "1px solid transparent",
-    transition: "all 300ms ease-out",
+    transition: "all 250ms ease",
   }}
   onMouseEnter={(e) => {
     e.currentTarget.style.backgroundColor = "transparent";
-    e.currentTarget.style.border = "1px solid #a1a1aa";
+    e.currentTarget.style.border = "1px solid rgba(255,255,255,0.55)";
     e.currentTarget.style.color = "#ffffff";
+    e.currentTarget.querySelector(".arrow").style.transform = "rotate(0deg)";
   }}
   onMouseLeave={(e) => {
     e.currentTarget.style.backgroundColor = "#f5f5f5";
     e.currentTarget.style.border = "1px solid transparent";
     e.currentTarget.style.color = "#2d2737";
+    e.currentTarget.querySelector(".arrow").style.transform = "rotate(-45deg)";
   }}
 >
-  Besøg Formatet <span>→</span>
+  Besøg Formatet
+
+  <span
+    className="arrow"
+    style={{
+      display: "inline-block",
+      fontSize: "16px",
+      transform: "rotate(-45deg)",
+      transition: "transform 250ms ease",
+      lineHeight: 1,
+    }}
+  >
+    →
+  </span>
 </a>
       </section>
 
