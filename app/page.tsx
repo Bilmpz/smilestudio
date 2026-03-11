@@ -1,3 +1,4 @@
+"use client";
 export default function Home() {
   return (
     <main
@@ -49,24 +50,36 @@ export default function Home() {
           Smile Studio er blevet til FORMATET
         </h2>
 
-        <a
-          href="#"
-          style={{
-            marginTop: "9px",
-            backgroundColor: "#f5f5f5",
-            color: "#2d2737",
-            textDecoration: "none",
-            padding: "10px 18px",
-            borderRadius: "6px",
-            fontSize: "0.82rem",
-            fontWeight: 500,
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          Besøg Formatet <span>→</span>
-        </a>
+<a
+  href="https://formatet.dk"
+  style={{
+    marginTop: "9px",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    padding: "10px 18px",
+    borderRadius: "6px",
+    fontSize: "0.82rem",
+    fontWeight: 500,
+    textDecoration: "none",
+    backgroundColor: "#f5f5f5",
+    color: "#2d2737",
+    border: "1px solid transparent",
+    transition: "all 300ms ease-out",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = "transparent";
+    e.currentTarget.style.border = "1px solid #a1a1aa";
+    e.currentTarget.style.color = "#ffffff";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = "#f5f5f5";
+    e.currentTarget.style.border = "1px solid transparent";
+    e.currentTarget.style.color = "#2d2737";
+  }}
+>
+  Besøg Formatet <span>→</span>
+</a>
       </section>
 
       <footer

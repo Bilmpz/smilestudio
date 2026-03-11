@@ -7,6 +7,12 @@ const roobert = localFont({
   display: "swap",
 });
 
+export const metadata = {
+  icons: {
+    icon: "/smile-favicon-64.png",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
